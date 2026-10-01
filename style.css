@@ -13,10 +13,11 @@ body {
     margin: 0;
     padding: 0;
     border: 0.03rem solid;
+    border-radius: 10px;
     width: 97.5vw;
     min-width: 243px;
     height: 98.5vh;
-    background: var(--cinza); 
+    background: var(--azul-300); 
 }
 
 main {
@@ -26,7 +27,8 @@ main {
     flex-direction: column;
     width: 100%;
     height: 100%;
-    background: var(--cinza);
+    background: var(--azul-200);
+    border-radius: 10px;
 }
 
 .container {
@@ -35,10 +37,12 @@ main {
     justify-content: center;
     align-items: center;
     border: 0.03rem solid;
+    border-radius: 10px;
     background: var(--cinza);
     width: 70%;
     height: 90%;
     transition: background-color 0.4s ease-in-out;
+    background: var(--azul-100);
 }
 
 #carousel {  
@@ -47,6 +51,12 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 1.5px solid black;
+    border-radius: 10px;
+}
+#carousel:hover{
+    transform: scale(1.1);
+    cursor: pointer;
 }
 
 #btnEsquerda, #btnDireita {
@@ -71,11 +81,11 @@ main {
 }
 
 #btnEsquerda:hover {
-    transform: translateY(-50%) scale(1.2);
+    transform: translateY(-50%) scale(1.3);
 }
 
 #btnDireita:hover {
-    transform: translateY(-50%) scale(1.2);
+    transform: translateY(-50%) scale(1.3);
 }
 
 #btnEsquerda:active {
