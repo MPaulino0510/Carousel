@@ -1,23 +1,25 @@
-:root{
-    --azul-100:rgb(231, 231, 255);
-    --azul-200:rgb(177, 177, 255);
-    --azul-300:rgb(75, 7, 253);
+:root {
+    --azul-100: rgb(231, 231, 255);
+    --azul-200: rgb(177, 177, 255);
+    --azul-300: rgb(75, 7, 253);
     --vermelho-vivo: red;
-    --vermelho-escuro:rgb(164, 3, 3);
+    --vermelho-escuro: rgb(164, 3, 3);
     --rosa: rgb(252, 85, 188);
     --cinza: rgb(235, 235, 235);
     --branco: white;
 }
-body{
+
+body {
     margin: 0;
-    padding:0;
+    padding: 0;
     border: 0.03rem solid;
     width: 97.5vw;
     min-width: 243px;
     height: 98.5vh;
-    background: var(--);
+    background: var(--cinza); 
 }
-main{
+
+main {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,11 +27,12 @@ main{
     width: 100%;
     height: 100%;
     background: var(--cinza);
-
 }
-.container{
+
+.container {
+    position: absolute;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     border: 0.03rem solid;
     background: var(--cinza);
@@ -37,12 +40,48 @@ main{
     height: 90%;
     transition: background-color 0.4s ease-in-out;
 }
-#btnEsquerda, #btnDireita{
+
+#carousel {  
+    width: 80%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#btnEsquerda, #btnDireita {
+    position: absolute; 
+    top: 50%;
+    transform: translateY(-50%); 
     cursor: pointer;
     padding: 1rem;
     user-select: none;
+    border: none;
+    border-radius: 50%;
+    background-color: transparent;
+    transition: transform 0.2s ease;
 }
-.Carousel{
-    width: 50%;
-    height: 30%;
+
+#btnEsquerda {
+    left: -60px;
+}
+
+#btnDireita {
+    right: -60px;
+}
+
+#btnEsquerda:hover {
+    transform: translateY(-50%) scale(1.2);
+}
+
+#btnDireita:hover {
+    transform: translateY(-50%) scale(1.2);
+}
+
+#btnEsquerda:active {
+    transform: translateY(-50%) scale(0.9);
+}
+
+#btnDireita:active {
+    transform: translateY(-50%) scale(0.9);
 }
